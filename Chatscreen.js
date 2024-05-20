@@ -8,7 +8,7 @@ const ChatScreen = () => {
   const [inputText, setInputText] = useState('');
 
   useEffect(() => {
-    // Load messages from AsyncStorage on component mount
+
     AsyncStorage.getItem('messages').then((storedMessages) => {
       if (storedMessages) {
         setMessages(JSON.parse(storedMessages));
